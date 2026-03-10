@@ -11,11 +11,14 @@
       background-color: #2b2b2b; 
       display: flex;
       justify-content: center;
-      padding: 50px;
+      padding: 20px; 
+      margin: 0;
+      box-sizing: border-box;
     }
 
     .scroll-wrapper {
-      width: 600px; 
+      width: 100%; 
+      max-width: 600px; 
       font-family: 'Germania One', system-ui;
       color: #3e2723; 
     }
@@ -48,7 +51,6 @@
         linear-gradient(to right, rgba(0,0,0,0.08) 0%, transparent 10%, transparent 90%, rgba(0,0,0,0.08) 100%),
         linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, transparent 2%, transparent 98%, rgba(0,0,0,0.15) 100%);
     }
-  
 
     /* Base Typography */
     .scroll-paper h1 {
@@ -65,7 +67,7 @@
       font-size: 1.35rem; 
       line-height: 1.5;
       margin-bottom: 20px;
-      text-align: justify; 
+      text-align: left; /* Kept left-aligned so the mobile spacing stays clean! */
     }
 
     /* Drop Cap */
@@ -96,6 +98,35 @@
       text-align: center;
       font-size: 1.4rem;
       margin-top: 30px;
+    }
+
+    /* --- MOBILE RESPONSIVENESS --- */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px; 
+      }
+      
+      .scroll-paper {
+        padding: 30px 20px; 
+        margin: -10px 5px; 
+      }
+
+      .scroll-paper h1 {
+        font-size: 2rem; 
+      }
+
+      .scroll-paper p {
+        font-size: 1.15rem; 
+      }
+
+      .drop-cap {
+        font-size: 3.5rem; 
+      }
+      
+      .aphorism {
+        font-size: 1.3rem; 
+        padding: 15px 10px;
+      }
     }
   </style>
 </head>
